@@ -1,0 +1,51 @@
+@media only screen and (max-width: 769px) {
+    .nav_ul {
+        flex-direction: column;
+        height: 63%;
+        width: 50%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background: #ffffff;
+        justify-content: space-evenly;
+        align-items: center;
+        z-index: 1;
+        border-radius: 5px;
+        -webkit-box-shadow: -4px 7px 17px 2px rgba(0,0,0,0.36); 
+        box-shadow: -4px 7px 17px 2px rgba(0,0,0,0.36);
+
+        clip-path: circle(0 at top);
+        transition: all ease-in-out 400ms;
+    }
+
+    .nav_ul li a {
+        color: #555;
+    }
+
+    .navbar-toggle {
+        background-position: center;
+        padding: 12px;
+        background-repeat: no-repeat;
+        border: none;
+        background-color: transparent;
+        display: inline-block;
+    }
+
+    .site-nav-open {
+        clip-path: circle(150% at top);
+    }
+
+    .hidden {
+        display: inline-block;
+        padding-top: 50px;
+    }
+
+    .open {
+        background-image: url(/src/img/haburger_icons/icon-hamburger.svg);
+    }
+
+    .close {
+        background-image: url(/src/img/haburger_icons/icon-close.svg);
+        z-index: 1;
+    }
+}

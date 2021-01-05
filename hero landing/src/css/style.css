@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #f4f4f4;
+    font-family: 'Lato', sans-serif;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/* Setting Nav */
+.nav_flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav_ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav_ul li {
+    padding: 15px 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Nav ul Underline when hover ".nav_ul li a" */
+.nav_ul li a {
+    position: relative;
+}
+
+.nav_ul li a::after {
+    position: absolute;
+    top: 23px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0;
+    content: ".";
+    color: transparent;
+    background: rgba(240, 193,123);
+    height: 1px;
+}
+
+.nav_ul li a:hover::after {
+    width: 100%;
+}
+
+.nav_ul li a::after,
+.nav_ul li a::before {
+    transition: all .5s;
+}
+
+a:hover {
+    color: rgba(240, 193,123);
+    transition: all .5s;
+}
+
+/* Header */
+header {
+    background-image: linear-gradient(to right, rgba(240,193,123, 0.705) 05%, rgba(75, 18,72, 0.705)), url(/src/img/norbert-buduczki-W2e4_vGGusU-unsplash.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+}
+
+.hero_text_container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero_text_container h1 {
+    text-align: center;
+    font-size: 49px;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.hero_text_container p {
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    text-align: center;
+    width: 97%;
+    margin: 0 auto;
+}
